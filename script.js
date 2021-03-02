@@ -639,84 +639,85 @@ function withoutFlat(arr) {
     })(arr);
 
     return emptyArray;
+}
 
-    console.log(withoutFlat(array));
+console.log(withoutFlat(array));
 
-    //=======================================================
-    //=========        Практична робота      ================
-    //=======================================================
+//=======================================================
+//=========        Практична робота      ================
+//=======================================================
 
-    //1) создать функцию которая принимает массив и возвращает строку ([1, 2, 3, 4, 5, 6] -> "123456")
+//1) создать функцию которая принимает массив и возвращает строку ([1, 2, 3, 4, 5, 6] -> "123456")
 
-    function returnString(arr) {
-        let string = '';
-        for (const el of arr) {
-            string = string + el;
-        }
-        return string;
+function returnString(arr) {
+    let string = '';
+    for (const el of arr) {
+        string = string + el;
     }
+    return string;
+}
 
-    console.log(returnString([1, 2, 3, 4, 5, 6]));
+console.log(returnString([1, 2, 3, 4, 5, 6]));
 
 
-    //2) создать функцию которая принимает массив чисел и возвращает этот же массив,
-    //но каждый его элемент больше на 1 ([5,2,3] -> [6,3,4])
+//2) создать функцию которая принимает массив чисел и возвращает этот же массив,
+//но каждый его элемент больше на 1 ([5,2,3] -> [6,3,4])
 
-    function changedArray(arr) {
-        let emptyArray = [];
-        for (let i = 0; i < arr.length; i++) {
-            emptyArray[i] = arr[i] + 1;
-
-        }
-        return emptyArray;
+function changedArray(arr) {
+    let emptyArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        emptyArray[i] = arr[i] + 1;
 
     }
+    return emptyArray;
 
-    console.log(changedArray([5, 2, 3]));
+}
+
+console.log(changedArray([5, 2, 3]));
 
 
-    //3) создать функцию которая принимает число n, min, max
-    //и возвращает массив длиной n с случайными числами в диапазоне от min до max
+//3) создать функцию которая принимает число n, min, max
+//и возвращает массив длиной n с случайными числами в диапазоне от min до max
 
-    function randomLengthArray(n, min, max) {
-        let emptyArray = [];
-        for (let i = 0; i < n; i++) {
-            emptyArray[i] = Math.round(Math.random() * (max - min)) + min;
+function randomLengthArray(n, min, max) {
+    let emptyArray = [];
+    for (let i = 0; i < n; i++) {
+        emptyArray[i] = Math.round(Math.random() * (max - min)) + min;
 
-        }
-        return emptyArray;
     }
+    return emptyArray;
+}
 
-    console.log(randomLengthArray(15, 1, 40));
+console.log(randomLengthArray(15, 1, 40));
 
-    //4)  создать функцию которая принимает age и массив  (массив ниже или придумайте свой)
-    // и возвращает новый массив с теми юзерами которые совпадают по возрасту
+//4)  создать функцию которая принимает age и массив  (массив ниже или придумайте свой)
+// и возвращает новый массив с теми юзерами которые совпадают по возрасту
 
-    // Пример:
-    // someFunc(30, users) -> [
-    //     {id: 2, name: 'petya', age: 30, status: true},
-    //     {id: 4, name: 'olya', age: 30, status: false},
-    //     {id: 4, name: 'marta', age: 30, status: false},
-    // ]
+// Пример:
+// someFunc(30, users) -> [
+//     {id: 2, name: 'petya', age: 30, status: true},
+//     {id: 4, name: 'olya', age: 30, status: false},
+//     {id: 4, name: 'marta', age: 30, status: false},
+// ]
 
-    users = [
-        { id: 1, name: 'vasya', age: 31, status: false },
-        { id: 2, name: 'petya', age: 30, status: true },
-        { id: 3, name: 'kolya', age: 29, status: true },
-        { id: 4, name: 'olya', age: 30, status: false },
-        { id: 4, name: 'kira', age: 29, status: false },
-        { id: 4, name: 'marta', age: 30, status: false },
-    ];
+users = [
+    { id: 1, name: 'vasya', age: 31, status: false },
+    { id: 2, name: 'petya', age: 30, status: true },
+    { id: 3, name: 'kolya', age: 29, status: true },
+    { id: 4, name: 'olya', age: 30, status: false },
+    { id: 4, name: 'kira', age: 29, status: false },
+    { id: 4, name: 'marta', age: 30, status: false },
+];
 
 
-    function arraySortAge(age, arr) {
-        let emptyArray = [];
-        for (const user of arr) {
-            if (age === user.age) {
-                emptyArray.push(user);
-            }
+function arraySortAge(age, arr) {
+    let emptyArray = [];
+    for (const user of arr) {
+        if (age === user.age) {
+            emptyArray.push(user);
         }
-        return emptyArray;
     }
+    return emptyArray;
+}
 
-    console.log(arraySortAge(29, users));
+console.log(arraySortAge(29, users));
